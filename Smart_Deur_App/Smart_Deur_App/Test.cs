@@ -16,5 +16,10 @@ namespace Smart_Deur_App
         {
             InitializeComponent();
         }
+
+        private void Test_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
