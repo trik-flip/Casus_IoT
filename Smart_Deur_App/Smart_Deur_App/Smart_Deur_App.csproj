@@ -46,12 +46,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BezoekersPasAanpassen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BezoekersPasAanpassen.Designer.cs" />
+    <Compile Include="BezoekersPasAanvragen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BezoekersPasAanvragen.Designer.cs" />
+    <Compile Include="BezoekersPasMaken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BezoekersPasMaken.Designer.cs" />
+    <Compile Include="BezoekersPasVerwijderen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BezoekersPasVerwijderen.Designer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoofdmenuBeveiligingIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoofdmenuBeveiligingIT.Designer.cs" />
+    <Compile Include="HoofdmenuDokter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoofdmenuDokter.Designer.cs" />
+    <Compile Include="HoofdmenuVerpleger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoofdmenuVerpleger.Designer.cs" />
+    <Compile Include="Inloggen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inloggen.Designer.cs" />
+    <Compile Include="MedewerkerAanpassen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedewerkerAanpassen.Designer.cs" />
+    <Compile Include="MedewerkersPasAanpassen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedewerkersPasAanpassen.Designer.cs" />
+    <Compile Include="MedewerkersPasMaken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedewerkersPasMaken.Designer.cs" />
+    <Compile Include="MedewerkersPasVerwijderen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedewerkersPasVerwijderen.Designer.cs" />
+    <Compile Include="MedewerkerToevoegen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedewerkerToevoegen.Designer.cs" />
+    <Compile Include="MedewerkerVerwijderen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedewerkerVerwijderen.Designer.cs" />
+    <Compile Include="MenuPasAanpassen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPasAanpassen.Designer.cs" />
+    <Compile Include="MenuPasMaken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPasMaken.Designer.cs" />
+    <Compile Include="MenuPasVerwijderen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPasVerwijderen.Designer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test.cs">
@@ -63,6 +131,7 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inloggen.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
