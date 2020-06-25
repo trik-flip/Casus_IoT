@@ -128,8 +128,17 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BezoekersPasAanpassen.resx">
+      <DependentUpon>BezoekersPasAanpassen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BezoekersPasAanvragen.resx">
+      <DependentUpon>BezoekersPasAanvragen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoofdmenuVerpleger.resx">
+      <DependentUpon>HoofdmenuVerpleger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inloggen.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
