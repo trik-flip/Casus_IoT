@@ -22,6 +22,8 @@ namespace Smart_Deur_App
         private TextBox tb_AdresOuders;
         private TextBox tb_NaamOuder;
         private Label lb_AdresOuders;
+        private Button btn_BezoekersPasAanvragen;
+        private Button btn_Annuleren;
         private Label lb_NaamOuder;
 
         public BezoekersPasAanvragen()
@@ -42,6 +44,8 @@ namespace Smart_Deur_App
             this.tb_NaamOuder = new System.Windows.Forms.TextBox();
             this.lb_AdresOuders = new System.Windows.Forms.Label();
             this.lb_NaamOuder = new System.Windows.Forms.Label();
+            this.btn_BezoekersPasAanvragen = new System.Windows.Forms.Button();
+            this.btn_Annuleren = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Uitloggen
@@ -133,9 +137,29 @@ namespace Smart_Deur_App
             this.lb_NaamOuder.TabIndex = 11;
             this.lb_NaamOuder.Text = "Naam Ouder:";
             // 
+            // btn_BezoekersPasAanvragen
+            // 
+            this.btn_BezoekersPasAanvragen.Location = new System.Drawing.Point(180, 240);
+            this.btn_BezoekersPasAanvragen.Name = "btn_BezoekersPasAanvragen";
+            this.btn_BezoekersPasAanvragen.Size = new System.Drawing.Size(75, 23);
+            this.btn_BezoekersPasAanvragen.TabIndex = 22;
+            this.btn_BezoekersPasAanvragen.Text = "Aanvragen";
+            this.btn_BezoekersPasAanvragen.UseVisualStyleBackColor = true;
+            // 
+            // btn_Annuleren
+            // 
+            this.btn_Annuleren.Location = new System.Drawing.Point(274, 240);
+            this.btn_Annuleren.Name = "btn_Annuleren";
+            this.btn_Annuleren.Size = new System.Drawing.Size(75, 23);
+            this.btn_Annuleren.TabIndex = 23;
+            this.btn_Annuleren.Text = "Annuleren";
+            this.btn_Annuleren.UseVisualStyleBackColor = true;
+            // 
             // BezoekersPasAanvragen
             // 
             this.ClientSize = new System.Drawing.Size(564, 439);
+            this.Controls.Add(this.btn_Annuleren);
+            this.Controls.Add(this.btn_BezoekersPasAanvragen);
             this.Controls.Add(this.btn_Uitloggen);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lb_KamernummerKind);
