@@ -128,10 +128,64 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uitloggen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uitloggen.Designer.cs">
+      <DependentUpon>Uitloggen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BezoekersPasAanpassen.resx">
+      <DependentUpon>BezoekersPasAanpassen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BezoekersPasAanvragen.resx">
+      <DependentUpon>BezoekersPasAanvragen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BezoekersPasMaken.resx">
+      <DependentUpon>BezoekersPasMaken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BezoekersPasVerwijderen.resx">
+      <DependentUpon>BezoekersPasVerwijderen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HoofdmenuBeveiligingIT.resx">
+      <DependentUpon>HoofdmenuBeveiligingIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoofdmenuDokter.resx">
+      <DependentUpon>HoofdmenuDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoofdmenuVerpleger.resx">
+      <DependentUpon>HoofdmenuVerpleger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inloggen.resx" />
+    <EmbeddedResource Include="MedewerkerAanpassen.resx">
+      <DependentUpon>MedewerkerAanpassen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedewerkersPasAanpassen.resx">
+      <DependentUpon>MedewerkersPasAanpassen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedewerkersPasMaken.resx">
+      <DependentUpon>MedewerkersPasMaken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedewerkersPasVerwijderen.resx">
+      <DependentUpon>MedewerkersPasVerwijderen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedewerkerToevoegen.resx">
+      <DependentUpon>MedewerkerToevoegen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedewerkerVerwijderen.resx">
+      <DependentUpon>MedewerkerVerwijderen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPasAanpassen.resx">
+      <DependentUpon>MenuPasAanpassen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPasMaken.resx">
+      <DependentUpon>MenuPasMaken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPasVerwijderen.resx">
+      <DependentUpon>MenuPasVerwijderen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
