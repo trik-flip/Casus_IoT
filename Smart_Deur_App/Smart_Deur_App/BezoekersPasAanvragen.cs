@@ -47,7 +47,7 @@ namespace Smart_Deur_App
 
         private void BezoekersPasAanvragen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
             {
                 this.Close();
             };

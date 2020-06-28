@@ -29,7 +29,7 @@ namespace Smart_Deur_App
 
         private void BezoekersPasMaken_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
             {
                 this.Close();
             }
@@ -41,7 +41,7 @@ namespace Smart_Deur_App
             {
                 MenuPasMaken menuPasMaken = new MenuPasMaken();
                 menuPasMaken.Show();
-                this.Close()
+                this.Hide();
             }
         }
 
