@@ -49,19 +49,27 @@
     <Compile Include="BezoekersPasAanpassen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BezoekersPasAanpassen.Designer.cs" />
+    <Compile Include="BezoekersPasAanpassen.Designer.cs">
+      <DependentUpon>BezoekersPasAanpassen.cs</DependentUpon>
+    </Compile>
     <Compile Include="BezoekersPasAanvragen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BezoekersPasAanvragen.Designer.cs" />
+    <Compile Include="BezoekersPasAanvragen.Designer.cs">
+      <DependentUpon>BezoekersPasAanvragen.cs</DependentUpon>
+    </Compile>
     <Compile Include="BezoekersPasMaken.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BezoekersPasMaken.Designer.cs" />
+    <Compile Include="BezoekersPasMaken.Designer.cs">
+      <DependentUpon>BezoekersPasMaken.cs</DependentUpon>
+    </Compile>
     <Compile Include="BezoekersPasVerwijderen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BezoekersPasVerwijderen.Designer.cs" />
+    <Compile Include="BezoekersPasVerwijderen.Designer.cs">
+      <DependentUpon>BezoekersPasVerwijderen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,63 +79,83 @@
     <Compile Include="HoofdmenuBeveiligingIT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HoofdmenuBeveiligingIT.Designer.cs" />
+    <Compile Include="HoofdmenuBeveiligingIT.Designer.cs">
+      <DependentUpon>HoofdmenuBeveiligingIT.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoofdmenuDokter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HoofdmenuDokter.Designer.cs" />
+    <Compile Include="HoofdmenuDokter.Designer.cs">
+      <DependentUpon>HoofdmenuDokter.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoofdmenuVerpleger.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HoofdmenuVerpleger.Designer.cs" />
+    <Compile Include="HoofdmenuVerpleger.Designer.cs">
+      <DependentUpon>HoofdmenuVerpleger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inloggen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inloggen.Designer.cs" />
+    <Compile Include="Inloggen.Designer.cs">
+      <DependentUpon>Inloggen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MedewerkerAanpassen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MedewerkerAanpassen.Designer.cs" />
+    <Compile Include="MedewerkerAanpassen.Designer.cs">
+      <DependentUpon>MedewerkerAanpassen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MedewerkersPasAanpassen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MedewerkersPasAanpassen.Designer.cs" />
+    <Compile Include="MedewerkersPasAanpassen.Designer.cs">
+      <DependentUpon>MedewerkersPasAanpassen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MedewerkersPasMaken.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MedewerkersPasMaken.Designer.cs" />
+    <Compile Include="MedewerkersPasMaken.Designer.cs">
+      <DependentUpon>MedewerkersPasMaken.cs</DependentUpon>
+    </Compile>
     <Compile Include="MedewerkersPasVerwijderen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MedewerkersPasVerwijderen.Designer.cs" />
+    <Compile Include="MedewerkersPasVerwijderen.Designer.cs">
+      <DependentUpon>MedewerkersPasVerwijderen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MedewerkerToevoegen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MedewerkerToevoegen.Designer.cs" />
+    <Compile Include="MedewerkerToevoegen.Designer.cs">
+      <DependentUpon>MedewerkerToevoegen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MedewerkerVerwijderen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MedewerkerVerwijderen.Designer.cs" />
+    <Compile Include="MedewerkerVerwijderen.Designer.cs">
+      <DependentUpon>MedewerkerVerwijderen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPasAanpassen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPasAanpassen.Designer.cs" />
+    <Compile Include="MenuPasAanpassen.Designer.cs">
+      <DependentUpon>MenuPasAanpassen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPasMaken.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPasMaken.Designer.cs" />
+    <Compile Include="MenuPasMaken.Designer.cs">
+      <DependentUpon>MenuPasMaken.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPasVerwijderen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPasVerwijderen.Designer.cs" />
+    <Compile Include="MenuPasVerwijderen.Designer.cs">
+      <DependentUpon>MenuPasVerwijderen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Uitloggen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,7 +186,6 @@
     <EmbeddedResource Include="HoofdmenuVerpleger.resx">
       <DependentUpon>HoofdmenuVerpleger.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inloggen.resx" />
     <EmbeddedResource Include="MedewerkerAanpassen.resx">
       <DependentUpon>MedewerkerAanpassen.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,9 +222,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

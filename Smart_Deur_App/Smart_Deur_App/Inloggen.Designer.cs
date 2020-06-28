@@ -13,7 +13,7 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if(disposing && (components != null))
+            if (disposing && (components != null))
             {
                 components.Dispose();
             }
@@ -33,10 +33,9 @@
             // 
             // btn_Inloggen
             // 
-            this.btn_Inloggen.Location = new System.Drawing.Point(211, 203);
-            this.btn_Inloggen.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Inloggen.Location = new System.Drawing.Point(395, 137);
             this.btn_Inloggen.Name = "btn_Inloggen";
-            this.btn_Inloggen.Size = new System.Drawing.Size(95, 24);
+            this.btn_Inloggen.Size = new System.Drawing.Size(75, 23);
             this.btn_Inloggen.TabIndex = 0;
             this.btn_Inloggen.Text = "Inloggen";
             this.btn_Inloggen.UseVisualStyleBackColor = true;
@@ -45,12 +44,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_Inloggen);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Inloggen";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Inloggen_Load);
+            this.Text = "Inloggen";
             this.ResumeLayout(false);
 
         }
@@ -60,4 +57,3 @@
         private System.Windows.Forms.Button btn_Inloggen;
     }
 }
-
