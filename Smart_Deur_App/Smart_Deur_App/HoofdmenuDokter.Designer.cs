@@ -72,6 +72,7 @@
             this.btn_Uitloggen.TabIndex = 10;
             this.btn_Uitloggen.Text = "Uitloggen";
             this.btn_Uitloggen.UseVisualStyleBackColor = true;
+            this.btn_Uitloggen.Click += new System.EventHandler(this.btn_Uitloggen_Click);
             // 
             // HoofdmenuDokter
             // 
@@ -84,6 +85,7 @@
             this.Controls.Add(this.btn_Uitloggen);
             this.Name = "HoofdmenuDokter";
             this.Text = "HoofdmenuDokter";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HoofdmenuDokter_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

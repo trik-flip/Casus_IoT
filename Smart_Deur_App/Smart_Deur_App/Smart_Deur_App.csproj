@@ -100,6 +100,12 @@
     <Compile Include="Inloggen.Designer.cs">
       <DependentUpon>Inloggen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logboek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logboek.Designer.cs">
+      <DependentUpon>Logboek.cs</DependentUpon>
+    </Compile>
     <Compile Include="MedewerkerAanpassen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HoofdmenuVerpleger.resx">
       <DependentUpon>HoofdmenuVerpleger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inloggen.resx">
+      <DependentUpon>Inloggen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logboek.resx">
+      <DependentUpon>Logboek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MedewerkerAanpassen.resx">
       <DependentUpon>MedewerkerAanpassen.cs</DependentUpon>

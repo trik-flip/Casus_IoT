@@ -70,6 +70,7 @@
             this.btn_Annuleren.TabIndex = 54;
             this.btn_Annuleren.Text = "Annuleren";
             this.btn_Annuleren.UseVisualStyleBackColor = true;
+            this.btn_Annuleren.Click += new System.EventHandler(this.btn_Annuleren_Click);
             // 
             // btn_Toevoegen
             // 
@@ -79,6 +80,7 @@
             this.btn_Toevoegen.TabIndex = 53;
             this.btn_Toevoegen.Text = "Toevoegen";
             this.btn_Toevoegen.UseVisualStyleBackColor = true;
+            this.btn_Toevoegen.Click += new System.EventHandler(this.btn_Toevoegen_Click);
             // 
             // tb_Telefoonnummer
             // 
@@ -116,6 +118,7 @@
             this.btn_Uitloggen.TabIndex = 48;
             this.btn_Uitloggen.Text = "Uitloggen";
             this.btn_Uitloggen.UseVisualStyleBackColor = true;
+            this.btn_Uitloggen.Click += new System.EventHandler(this.btn_Uitloggen_Click);
             // 
             // tb_NaamMedewerker
             // 
@@ -202,6 +205,7 @@
             this.Controls.Add(this.lb_MedewerkerToevoegen);
             this.Name = "MedewerkerToevoegen";
             this.Text = "MedewerkerToevoegen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MedewerkerToevoegen_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

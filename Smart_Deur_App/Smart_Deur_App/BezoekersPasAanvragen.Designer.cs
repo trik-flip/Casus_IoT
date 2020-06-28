@@ -51,6 +51,7 @@
             this.btn_Annuleren.TabIndex = 36;
             this.btn_Annuleren.Text = "Annuleren";
             this.btn_Annuleren.UseVisualStyleBackColor = true;
+            this.btn_Annuleren.Click += new System.EventHandler(this.btn_Annuleren_Click);
             // 
             // btn_BezoekersPasAanvragen
             // 
@@ -60,6 +61,7 @@
             this.btn_BezoekersPasAanvragen.TabIndex = 35;
             this.btn_BezoekersPasAanvragen.Text = "Aanvragen";
             this.btn_BezoekersPasAanvragen.UseVisualStyleBackColor = true;
+            this.btn_BezoekersPasAanvragen.Click += new System.EventHandler(this.btn_BezoekersPasAanvragen_Click);
             // 
             // btn_Uitloggen
             // 
@@ -69,6 +71,7 @@
             this.btn_Uitloggen.TabIndex = 34;
             this.btn_Uitloggen.Text = "Uitloggen";
             this.btn_Uitloggen.UseVisualStyleBackColor = true;
+            this.btn_Uitloggen.Click += new System.EventHandler(this.btn_Uitloggen_Click);
             // 
             // textBox1
             // 
@@ -170,6 +173,7 @@
             this.Controls.Add(this.lb_NaamOuder);
             this.Name = "BezoekersPasAanvragen";
             this.Text = "BezoekersPasAanvragen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BezoekersPasAanvragen_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

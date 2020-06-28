@@ -81,6 +81,7 @@
             this.btn_Annuleren.TabIndex = 56;
             this.btn_Annuleren.Text = "Annuleren";
             this.btn_Annuleren.UseVisualStyleBackColor = true;
+            this.btn_Annuleren.Click += new System.EventHandler(this.btn_Annuleren_Click);
             // 
             // btn_Aanmaken
             // 
@@ -90,6 +91,7 @@
             this.btn_Aanmaken.TabIndex = 55;
             this.btn_Aanmaken.Text = "Aanmaken";
             this.btn_Aanmaken.UseVisualStyleBackColor = true;
+            this.btn_Aanmaken.Click += new System.EventHandler(this.btn_Aanmaken_Click);
             // 
             // btn_ScanBarcode
             // 
@@ -138,6 +140,7 @@
             this.btn_Uitloggen.TabIndex = 49;
             this.btn_Uitloggen.Text = "Uitloggen";
             this.btn_Uitloggen.UseVisualStyleBackColor = true;
+            this.btn_Uitloggen.Click += new System.EventHandler(this.btn_Uitloggen_Click);
             // 
             // tb_NaamOuder
             // 
@@ -226,6 +229,7 @@
             this.Controls.Add(this.lb_PasMaken);
             this.Name = "BezoekersPasMaken";
             this.Text = "BezoekersPasMaken";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BezoekersPasMaken_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Barcode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

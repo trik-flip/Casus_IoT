@@ -54,6 +54,7 @@
             this.btn_Annuleren.TabIndex = 76;
             this.btn_Annuleren.Text = "Annuleren";
             this.btn_Annuleren.UseVisualStyleBackColor = true;
+            this.btn_Annuleren.Click += new System.EventHandler(this.btn_Annuleren_Click);
             // 
             // btn_Verwijderen
             // 
@@ -63,6 +64,7 @@
             this.btn_Verwijderen.TabIndex = 75;
             this.btn_Verwijderen.Text = "Verwijderen";
             this.btn_Verwijderen.UseVisualStyleBackColor = true;
+            this.btn_Verwijderen.Click += new System.EventHandler(this.btn_Verwijderen_Click);
             // 
             // btn_NaamZoeken
             // 
@@ -81,6 +83,7 @@
             this.btn_Uitloggen.TabIndex = 73;
             this.btn_Uitloggen.Text = "Uitloggen";
             this.btn_Uitloggen.UseVisualStyleBackColor = true;
+            this.btn_Uitloggen.Click += new System.EventHandler(this.btn_Uitloggen_Click);
             // 
             // tb_NaamMedewerker
             // 
@@ -133,6 +136,7 @@
             this.Controls.Add(this.lb_MedewerkerVerwijderen);
             this.Name = "MedewerkerVerwijderen";
             this.Text = "MedewerkerVerwijderen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MedewerkerVerwijderen_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

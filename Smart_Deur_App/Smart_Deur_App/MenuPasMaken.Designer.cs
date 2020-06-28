@@ -43,6 +43,7 @@
             this.btn_Uitloggen.TabIndex = 9;
             this.btn_Uitloggen.Text = "Uitloggen";
             this.btn_Uitloggen.UseVisualStyleBackColor = true;
+            this.btn_Uitloggen.Click += new System.EventHandler(this.btn_Uitloggen_Click);
             // 
             // btn_Annuleren
             // 
@@ -52,6 +53,7 @@
             this.btn_Annuleren.TabIndex = 8;
             this.btn_Annuleren.Text = "Annuleren";
             this.btn_Annuleren.UseVisualStyleBackColor = true;
+            this.btn_Annuleren.Click += new System.EventHandler(this.btn_Annuleren_Click);
             // 
             // btn_BezoekerPas
             // 
@@ -61,6 +63,7 @@
             this.btn_BezoekerPas.TabIndex = 7;
             this.btn_BezoekerPas.Text = "Bezoeker";
             this.btn_BezoekerPas.UseVisualStyleBackColor = true;
+            this.btn_BezoekerPas.Click += new System.EventHandler(this.btn_BezoekerPas_Click);
             // 
             // btn_MedewerkerPas
             // 
@@ -70,6 +73,7 @@
             this.btn_MedewerkerPas.TabIndex = 6;
             this.btn_MedewerkerPas.Text = "Medewerker";
             this.btn_MedewerkerPas.UseVisualStyleBackColor = true;
+            this.btn_MedewerkerPas.Click += new System.EventHandler(this.btn_MedewerkerPas_Click);
             // 
             // lb_PasMaken
             // 
@@ -93,6 +97,7 @@
             this.Controls.Add(this.lb_PasMaken);
             this.Name = "MenuPasMaken";
             this.Text = "MenuPasMaken";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuPasMaken_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

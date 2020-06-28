@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoofdmenuVerpleger));
             this.cb_Kamers = new System.Windows.Forms.ComboBox();
             this.lb_SelecteerKamer = new System.Windows.Forms.Label();
             this.btn_BezoekerspasAanvragen = new System.Windows.Forms.Button();
             this.btn_DeurOpenen = new System.Windows.Forms.Button();
             this.btn_Uitloggen = new System.Windows.Forms.Button();
+            this.pb_Deur = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Deur)).BeginInit();
             this.SuspendLayout();
             // 
             // cb_Kamers
@@ -64,6 +67,7 @@
             this.btn_BezoekerspasAanvragen.TabIndex = 7;
             this.btn_BezoekerspasAanvragen.Text = "Bezoekerspas aanvragen";
             this.btn_BezoekerspasAanvragen.UseVisualStyleBackColor = true;
+            this.btn_BezoekerspasAanvragen.Click += new System.EventHandler(this.btn_BezoekerspasAanvragen_Click);
             // 
             // btn_DeurOpenen
             // 
@@ -73,6 +77,7 @@
             this.btn_DeurOpenen.TabIndex = 6;
             this.btn_DeurOpenen.Text = "Deur openen";
             this.btn_DeurOpenen.UseVisualStyleBackColor = true;
+            this.btn_DeurOpenen.Click += new System.EventHandler(this.btn_DeurOpenen_Click);
             // 
             // btn_Uitloggen
             // 
@@ -82,12 +87,23 @@
             this.btn_Uitloggen.TabIndex = 5;
             this.btn_Uitloggen.Text = "Uitloggen";
             this.btn_Uitloggen.UseVisualStyleBackColor = true;
+            this.btn_Uitloggen.Click += new System.EventHandler(this.btn_Uitloggen_Click);
+            // 
+            // pb_Deur
+            // 
+            this.pb_Deur.Image = ((System.Drawing.Image)(resources.GetObject("pb_Deur.Image")));
+            this.pb_Deur.Location = new System.Drawing.Point(92, 265);
+            this.pb_Deur.Name = "pb_Deur";
+            this.pb_Deur.Size = new System.Drawing.Size(158, 192);
+            this.pb_Deur.TabIndex = 10;
+            this.pb_Deur.TabStop = false;
             // 
             // HoofdmenuVerpleger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 270);
+            this.ClientSize = new System.Drawing.Size(567, 511);
+            this.Controls.Add(this.pb_Deur);
             this.Controls.Add(this.cb_Kamers);
             this.Controls.Add(this.lb_SelecteerKamer);
             this.Controls.Add(this.btn_BezoekerspasAanvragen);
@@ -95,6 +111,8 @@
             this.Controls.Add(this.btn_Uitloggen);
             this.Name = "HoofdmenuVerpleger";
             this.Text = "HoofdmenuVerpleger";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HoofdmenuVerpleger_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Deur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,5 +125,6 @@
         private System.Windows.Forms.Button btn_BezoekerspasAanvragen;
         private System.Windows.Forms.Button btn_DeurOpenen;
         private System.Windows.Forms.Button btn_Uitloggen;
+        private System.Windows.Forms.PictureBox pb_Deur;
     }
 }

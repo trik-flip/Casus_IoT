@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Smart_Deur_App
 {
-    public partial class MedewerkerAanpassen : Form
+    public partial class Logboek : Form
     {
-        public MedewerkerAanpassen()
+        public Logboek()
         {
             InitializeComponent();
         }
@@ -27,16 +27,6 @@ namespace Smart_Deur_App
             };
         }
 
-        private void btn_Aanpassen_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Medewerker is aangepast ", "Medewerker aanpassen", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
-            {
-                HoofdmenuBeveiligingIT hoofdmenuBeveiligingIT = new HoofdmenuBeveiligingIT();
-                hoofdmenuBeveiligingIT.Show();
-                this.Close();
-            }
-        }
-
         private void btn_Annuleren_Click(object sender, EventArgs e)
         {
             HoofdmenuBeveiligingIT hoofdmenuBeveiligingIT = new HoofdmenuBeveiligingIT();
@@ -44,7 +34,7 @@ namespace Smart_Deur_App
             this.Close();
         }
 
-        private void MedewerkerAanpassen_FormClosing(object sender, FormClosingEventArgs e)
+        private void Logboek_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {

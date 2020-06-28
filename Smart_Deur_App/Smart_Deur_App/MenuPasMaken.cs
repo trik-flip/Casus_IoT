@@ -16,5 +16,45 @@ namespace Smart_Deur_App
         {
             InitializeComponent();
         }
+
+        private void btn_Uitloggen_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("U bent uitgelogd", "Uitloggen", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                Inloggen inloggen = new Inloggen();
+                inloggen.Show();
+                this.Close();
+            };
+        }
+
+        private void MenuPasMaken_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.Close();
+            };
+        }
+
+        private void btn_MedewerkerPas_Click(object sender, EventArgs e)
+        {
+            MedewerkersPasMaken medewerkersPasMaken = new MedewerkersPasMaken();
+            medewerkersPasMaken.Show();
+            this.Hide();
+        }
+
+        private void btn_BezoekerPas_Click(object sender, EventArgs e)
+        {
+            BezoekersPasMaken bezoekersPasMaken = new BezoekersPasMaken();
+            bezoekersPasMaken.Show();
+            this.Hide();
+        }
+
+        private void btn_Annuleren_Click(object sender, EventArgs e)
+        {
+            HoofdmenuBeveiligingIT hoofdmenuBeveiligingIT = new HoofdmenuBeveiligingIT();
+            hoofdmenuBeveiligingIT.Show();
+            this.Close();
+        }
+    }
     }
 }

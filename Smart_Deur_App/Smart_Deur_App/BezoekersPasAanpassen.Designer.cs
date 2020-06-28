@@ -33,7 +33,7 @@
             this.lb_Kamernummer = new System.Windows.Forms.Label();
             this.pb_Barcode = new System.Windows.Forms.PictureBox();
             this.btn_Annuleren = new System.Windows.Forms.Button();
-            this.btn_Aanmaken = new System.Windows.Forms.Button();
+            this.btn_Aanpassen = new System.Windows.Forms.Button();
             this.btn_ScanBarcode = new System.Windows.Forms.Button();
             this.btn_KamerToevoegen = new System.Windows.Forms.Button();
             this.tb_Telefoonnummer = new System.Windows.Forms.TextBox();
@@ -91,15 +91,17 @@
             this.btn_Annuleren.TabIndex = 75;
             this.btn_Annuleren.Text = "Annuleren";
             this.btn_Annuleren.UseVisualStyleBackColor = true;
+            this.btn_Annuleren.Click += new System.EventHandler(this.btn_Annuleren_Click);
             // 
-            // btn_Aanmaken
+            // btn_Aanpassen
             // 
-            this.btn_Aanmaken.Location = new System.Drawing.Point(172, 343);
-            this.btn_Aanmaken.Name = "btn_Aanmaken";
-            this.btn_Aanmaken.Size = new System.Drawing.Size(75, 23);
-            this.btn_Aanmaken.TabIndex = 74;
-            this.btn_Aanmaken.Text = "Aanmaken";
-            this.btn_Aanmaken.UseVisualStyleBackColor = true;
+            this.btn_Aanpassen.Location = new System.Drawing.Point(172, 343);
+            this.btn_Aanpassen.Name = "btn_Aanpassen";
+            this.btn_Aanpassen.Size = new System.Drawing.Size(75, 23);
+            this.btn_Aanpassen.TabIndex = 74;
+            this.btn_Aanpassen.Text = "Aanpassen";
+            this.btn_Aanpassen.UseVisualStyleBackColor = true;
+            this.btn_Aanpassen.Click += new System.EventHandler(this.btn_Aanpassen_Click);
             // 
             // btn_ScanBarcode
             // 
@@ -148,6 +150,7 @@
             this.btn_Uitloggen.TabIndex = 68;
             this.btn_Uitloggen.Text = "Uitloggen";
             this.btn_Uitloggen.UseVisualStyleBackColor = true;
+            this.btn_Uitloggen.Click += new System.EventHandler(this.btn_Uitloggen_Click);
             // 
             // tb_NaamOuder
             // 
@@ -221,7 +224,7 @@
             this.Controls.Add(this.lb_Kamernummer);
             this.Controls.Add(this.pb_Barcode);
             this.Controls.Add(this.btn_Annuleren);
-            this.Controls.Add(this.btn_Aanmaken);
+            this.Controls.Add(this.btn_Aanpassen);
             this.Controls.Add(this.btn_ScanBarcode);
             this.Controls.Add(this.btn_KamerToevoegen);
             this.Controls.Add(this.tb_Telefoonnummer);
@@ -237,6 +240,7 @@
             this.Controls.Add(this.lb_PasAanpassen);
             this.Name = "BezoekersPasAanpassen";
             this.Text = "BezoekersPasAanpassen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BezoekersPasAanpassen_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Barcode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -250,7 +254,7 @@
         private System.Windows.Forms.Label lb_Kamernummer;
         private System.Windows.Forms.PictureBox pb_Barcode;
         private System.Windows.Forms.Button btn_Annuleren;
-        private System.Windows.Forms.Button btn_Aanmaken;
+        private System.Windows.Forms.Button btn_Aanpassen;
         private System.Windows.Forms.Button btn_ScanBarcode;
         private System.Windows.Forms.Button btn_KamerToevoegen;
         private System.Windows.Forms.TextBox tb_Telefoonnummer;
