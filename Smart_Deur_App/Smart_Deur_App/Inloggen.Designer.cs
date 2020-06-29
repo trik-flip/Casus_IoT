@@ -83,6 +83,7 @@
             this.tb_Wachtwoord.Name = "tb_Wachtwoord";
             this.tb_Wachtwoord.Size = new System.Drawing.Size(100, 20);
             this.tb_Wachtwoord.TabIndex = 4;
+            this.tb_Wachtwoord.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -116,11 +117,10 @@
             this.Controls.Add(this.lb_Wachtwoord);
             this.Controls.Add(this.lb_Gebruikersnaam);
             this.Controls.Add(this.btn_Inloggen);
-            this.Font = new System.Drawing.Font("Zilla Slab", 8.25F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Name = "Inloggen";
             this.Text = "Inloggen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Inloggen_FormClosing);
-            this.Load += new System.EventHandler(this.Inloggen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

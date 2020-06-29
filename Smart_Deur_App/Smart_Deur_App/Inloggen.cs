@@ -28,7 +28,6 @@ namespace Smart_Deur_App
                     this.Hide();
 
                 }
-
             }
             else if (tb_Gebruikersnaam.Text == "Dokter01")
             {
@@ -38,7 +37,6 @@ namespace Smart_Deur_App
                     hoofdmenuDokter.Show();
                     this.Hide();
                 }
-
             }
             else if (tb_Gebruikersnaam.Text == "Beveiliger01")
             {
@@ -48,7 +46,6 @@ namespace Smart_Deur_App
                     hoofdmenuBeveiliging.Show();
                     this.Hide();
                 }
-
             }
             else if (tb_Gebruikersnaam.Text == "IT01")
             {
@@ -56,26 +53,22 @@ namespace Smart_Deur_App
                 {
                     HoofdmenuBeveiligingIT hoofdmenuIt = new HoofdmenuBeveiligingIT();
                     hoofdmenuIt.Show();
-                    this.Hide();
-                    
+                    this.Hide();        
                 }
             }
             else MessageBox.Show("Ongeldige gebruikersnaam/wachtwoord");
-
         }
 
         private void Inloggen_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-            var closing = MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo);
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = (closing == DialogResult.No);
+                if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                {
+                    Application.ExitThread();
+                }
             }
-            
-        }
-
-        private void Inloggen_Load(object sender, EventArgs e)
-        {
 
         }
     }

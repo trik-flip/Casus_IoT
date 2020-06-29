@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoofdmenuDokter));
             this.cb_Kamers = new System.Windows.Forms.ComboBox();
             this.lb_SelecteerKamer = new System.Windows.Forms.Label();
             this.btn_DeurOpenen = new System.Windows.Forms.Button();
             this.btn_Uitloggen = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pb_Deur = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Deur)).BeginInit();
             this.SuspendLayout();
             // 
             // cb_Kamers
@@ -78,21 +79,21 @@
             this.btn_Uitloggen.UseVisualStyleBackColor = true;
             this.btn_Uitloggen.Click += new System.EventHandler(this.btn_Uitloggen_Click);
             // 
-            // pictureBox1
+            // pb_Deur
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(113, 227);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 182);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pb_Deur.Image = ((System.Drawing.Image)(resources.GetObject("pb_Deur.Image")));
+            this.pb_Deur.Location = new System.Drawing.Point(46, 227);
+            this.pb_Deur.Name = "pb_Deur";
+            this.pb_Deur.Size = new System.Drawing.Size(456, 499);
+            this.pb_Deur.TabIndex = 14;
+            this.pb_Deur.TabStop = false;
             // 
             // HoofdmenuDokter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 492);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(597, 767);
+            this.Controls.Add(this.pb_Deur);
             this.Controls.Add(this.cb_Kamers);
             this.Controls.Add(this.lb_SelecteerKamer);
             this.Controls.Add(this.btn_DeurOpenen);
@@ -100,7 +101,7 @@
             this.Name = "HoofdmenuDokter";
             this.Text = "HoofdmenuDokter";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HoofdmenuDokter_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Deur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,6 +113,6 @@
         private System.Windows.Forms.Label lb_SelecteerKamer;
         private System.Windows.Forms.Button btn_DeurOpenen;
         private System.Windows.Forms.Button btn_Uitloggen;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pb_Deur;
     }
 }

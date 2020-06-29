@@ -23,7 +23,7 @@ namespace Smart_Deur_App
             {
                 Inloggen inloggen = new Inloggen();
                 inloggen.Show();
-                this.Close();
+                this.Hide();
             };
         }
 
@@ -36,9 +36,12 @@ namespace Smart_Deur_App
 
         private void Logboek_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                this.Close();
+                if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                {
+                    this.Close();
+                }
             }
         }
     }

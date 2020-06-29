@@ -29,9 +29,12 @@ namespace Smart_Deur_App
 
         private void BezoekersPasMaken_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                this.Close();
+                if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                {
+                    this.Close();
+                }
             }
         }
 

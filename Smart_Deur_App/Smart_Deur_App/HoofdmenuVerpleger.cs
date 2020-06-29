@@ -21,7 +21,7 @@ namespace Smart_Deur_App
         private void btn_DeurOpenen_Click(object sender, EventArgs e)
         {
             pb_Deur.Show();
-            pb_Deur.ImageLocation = "C:/Users/samir nemri/Desktop/gif/giphy.gif";                   //"C:/Users/shirl/Desktop/giphy.gif";
+            pb_Deur.ImageLocation = "C:/Users/shirl/Desktop/giphy.gif";           // "C:/Users/samir nemri/Desktop/gif/giphy.gif";                   
             pb_Deur.Load();
         }
 
@@ -30,7 +30,7 @@ namespace Smart_Deur_App
             if (MessageBox.Show("U bent uitgelogd","Uitloggen",MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK){
                 Inloggen inloggen = new Inloggen();
                 inloggen.Show();
-                this.Close();
+                this.Hide();
 
             };
 
@@ -41,9 +41,12 @@ namespace Smart_Deur_App
 
         private void HoofdmenuVerpleger_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var closing = MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo);
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = (closing == DialogResult.No);
+                if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                {
+                    this.Close();
+                }
             }
         }
     

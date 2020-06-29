@@ -92,9 +92,9 @@
             // pb_Deur
             // 
             this.pb_Deur.Image = ((System.Drawing.Image)(resources.GetObject("pb_Deur.Image")));
-            this.pb_Deur.Location = new System.Drawing.Point(92, 265);
+            this.pb_Deur.Location = new System.Drawing.Point(12, 247);
             this.pb_Deur.Name = "pb_Deur";
-            this.pb_Deur.Size = new System.Drawing.Size(251, 192);
+            this.pb_Deur.Size = new System.Drawing.Size(483, 508);
             this.pb_Deur.TabIndex = 10;
             this.pb_Deur.TabStop = false;
             this.pb_Deur.Click += new System.EventHandler(this.pb_Deur_Click);
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 511);
+            this.ClientSize = new System.Drawing.Size(738, 745);
             this.Controls.Add(this.pb_Deur);
             this.Controls.Add(this.cb_Kamers);
             this.Controls.Add(this.lb_SelecteerKamer);

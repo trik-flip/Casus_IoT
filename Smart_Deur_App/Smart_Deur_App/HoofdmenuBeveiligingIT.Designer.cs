@@ -143,6 +143,7 @@
             // 
             // btn_LogboekOpvragen
             // 
+            this.btn_LogboekOpvragen.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_LogboekOpvragen.Location = new System.Drawing.Point(401, 144);
             this.btn_LogboekOpvragen.Name = "btn_LogboekOpvragen";
             this.btn_LogboekOpvragen.Size = new System.Drawing.Size(157, 23);

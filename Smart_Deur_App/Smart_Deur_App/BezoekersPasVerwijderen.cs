@@ -29,13 +29,16 @@ namespace Smart_Deur_App
 
         private void BezoekersPasVerwijderen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var closing = MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo);
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = (closing == DialogResult.No);
+                if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                {
+                    this.Close();
+                }
             }
         }
 
-        private void btn_Verwijderen_Click(object sender, EventArgs e)
+            private void btn_Verwijderen_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bezoekerspas is verwijdert", "Bezoekerspas verwijderen", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {

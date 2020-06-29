@@ -25,65 +25,69 @@ namespace Smart_Deur_App
                 inloggen.Show();
                 this.Hide();
                 
+                
             };
         }
         private void HoofdmenuBeveiligingIT_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var closing = MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo);
+            
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = (closing == DialogResult.No);
+                if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                {
+                    this.Close();
+                    
+                }
             }
-
-
         }
 
         private void btn_PasMaken_Click(object sender, EventArgs e)
         {
             MenuPasMaken menuPasMaken = new MenuPasMaken();
             menuPasMaken.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_PasAanpassen_Click(object sender, EventArgs e)
         {
             MenuPasAanpassen menuPasAanpassen = new MenuPasAanpassen();
             menuPasAanpassen.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_PasVerwijderen_Click(object sender, EventArgs e)
         {
             MenuPasVerwijderen menuPasVerwijderen = new MenuPasVerwijderen();
             menuPasVerwijderen.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_MedewerkerToevoegen_Click(object sender, EventArgs e)
         {
             MedewerkerToevoegen medewerkerToevoegen = new MedewerkerToevoegen();
             medewerkerToevoegen.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_MedewerkerAanapssen_Click(object sender, EventArgs e)
         {
             MedewerkerAanpassen medewerkerAanpassen = new MedewerkerAanpassen();
             medewerkerAanpassen.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_MedewerkerVerwijderen_Click(object sender, EventArgs e)
         {
             MedewerkerVerwijderen medewerkerVerwijderen = new MedewerkerVerwijderen();
             medewerkerVerwijderen.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_LogboekOpvragen_Click(object sender, EventArgs e)
         {
             Logboek logboek = new Logboek();
             logboek.Show();
-            this.Hide();
+            this.Close();
         }
 
         

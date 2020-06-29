@@ -31,9 +31,14 @@ namespace Smart_Deur_App
 
         private void HoofdmenuDokter_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var closing = MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo);
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = (closing == DialogResult.No);
+                if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                {
+                    Inloggen inloggen = new Inloggen();
+                    inloggen.Show();
+                    this.Close();
+                }
             }
         }
 
@@ -44,15 +49,11 @@ namespace Smart_Deur_App
 
         private void btn_DeurOpenen_Click(object sender, EventArgs e)
         {
-            pb_Deur.Show();
-            pb_Deur.ImageLocation = "C:/Users/samir nemri/Desktop/gif/giphy.gif";                   //"C:/Users/shirl/Desktop/giphy.gif";
-            pb_Deur.Load();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+           pb_Deur.Show();
+           pb_Deur.ImageLocation = "C:/Users/shirl/Desktop/giphy.gif";           // "C:/Users/samir nemri/Desktop/gif/giphy.gif";                   
+           pb_Deur.Load();
         }
     }
+
     
 }
