@@ -35,6 +35,10 @@
             this.tb_Wachtwoord = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ziekenhuisDBDataSet1 = new Smart_Deur_App.ZiekenhuisDBDataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ziekenhuisDBDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Inloggen
@@ -105,11 +109,25 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "U kunt inloggen met uw credentials";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(414, 170);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 7;
+            // 
+            // ziekenhuisDBDataSet1
+            // 
+            this.ziekenhuisDBDataSet1.DataSetName = "ZiekenhuisDBDataSet";
+            this.ziekenhuisDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Inloggen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_Wachtwoord);
@@ -121,6 +139,8 @@
             this.Name = "Inloggen";
             this.Text = "Inloggen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Inloggen_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ziekenhuisDBDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +155,7 @@
         private System.Windows.Forms.TextBox tb_Wachtwoord;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private ZiekenhuisDBDataSet ziekenhuisDBDataSet1;
     }
 }

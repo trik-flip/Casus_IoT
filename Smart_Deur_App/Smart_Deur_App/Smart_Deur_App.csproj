@@ -168,6 +168,11 @@
     <Compile Include="Uitloggen.Designer.cs">
       <DependentUpon>Uitloggen.cs</DependentUpon>
     </Compile>
+    <Compile Include="ZiekenhuisDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZiekenhuisDBDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BezoekersPasAanpassen.resx">
       <DependentUpon>BezoekersPasAanpassen.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,9 +248,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ZiekenhuisDBDataSet.xsc">
+      <DependentUpon>ZiekenhuisDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ZiekenhuisDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZiekenhuisDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZiekenhuisDBDataSet.xss">
+      <DependentUpon>ZiekenhuisDBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ZiekenhuisDB.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

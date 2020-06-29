@@ -2,32 +2,63 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Smart_Deur_App
 {
     public partial class Inloggen : Form
     {
+
+        OleDbConnection conn;
         public Inloggen()
         {
             InitializeComponent();
+            conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ZiekenhuisDB.accdb");
         }
 
         private void btn_Inloggen_Click(object sender, EventArgs e)
         {
-            if (tb_Gebruikersnaam.Text == "Verpleger01")
+           
+
+            string gebruikersnaam = tb_Gebruikersnaam.Text;
+            string wachtwoord = tb_Wachtwoord.Text;
+            //Alle gebruikers moeten in 1 tabel komen met functie erbij
+            //kolommen samenvoegen en dan vergelijken met elkaar. Dus gebruikersnaam, ww en functie
+            //string voor opvragen data in db
+            // eerst gebruikersnaam controleren of voorkomt in de db
+            // ophalen gebruiker/wachtwoord
+            // vergelijken met ingevoerde dus : gebruikersnaam hierboven en wachtwoord
+            //als correct functie van gebruiker ophalen
+            // met if en elif juiste menu openen.
+            string query = "SELECT Gebruikersnaam FROM Verpleger WHERE Gebruikersnaam = @gebruikersnaam";
+            OleDbCommand cmd = new OleDbCommand(query, conn);
+            cmd.Parameters.AddWithValue("@gebruikersnaam", gebruikersnaam);
+            cmd.Parameters.AddWithValue("@wachtwoord", wachtwoord);
+            conn.Open(); //openeen connecet             
+            OleDbDataReader reader = cmd.ExecuteReader();
+            while (reader.Read()) //database lezen
             {
-                if (tb_Wachtwoord.Text == "Welkom123")
-                {
+                var gebruikersnaamDB = reader.GetString(0);
+            }
+            
+        
+            conn.Close();
+
+            
+            //@TODO Dit lijstje aanpassen naar functie van gebruiker
+            if (tb_Gebruikersnaam.Text == "Verpleger01" && tb_Wachtwoord.Text == "Welkom123")
+            {
+                    
                     HoofdmenuVerpleger hoofdmenuVerpleger = new HoofdmenuVerpleger();
                     hoofdmenuVerpleger.Show();
                     this.Hide();
 
-                }
             }
             else if (tb_Gebruikersnaam.Text == "Dokter01")
             {
