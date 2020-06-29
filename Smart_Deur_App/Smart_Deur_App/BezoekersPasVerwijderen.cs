@@ -23,15 +23,15 @@ namespace Smart_Deur_App
             {
                 Inloggen inloggen = new Inloggen();
                 inloggen.Show();
-                this.Close();
+                this.Hide();
             };
         }
 
         private void BezoekersPasVerwijderen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            var closing = MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo);
             {
-                this.Close();
+                e.Cancel = (closing == DialogResult.No);
             }
         }
 
@@ -50,6 +50,16 @@ namespace Smart_Deur_App
             MenuPasVerwijderen menuPasVerwijderen = new MenuPasVerwijderen();
             menuPasVerwijderen.Show();
             this.Close();
+        }
+
+        private void btn_NaamZoeken_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ScanBarcode_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

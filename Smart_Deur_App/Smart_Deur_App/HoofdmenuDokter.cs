@@ -14,7 +14,9 @@ namespace Smart_Deur_App
     {
         public HoofdmenuDokter()
         {
+
             InitializeComponent();
+            pb_Deur.Hide();
         }
 
         private void btn_Uitloggen_Click(object sender, EventArgs e)
@@ -23,16 +25,33 @@ namespace Smart_Deur_App
             {
                 Inloggen inloggen = new Inloggen();
                 inloggen.Show();
-                this.Close();
+                this.Hide();
             };
         }
 
         private void HoofdmenuDokter_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Weet u het zeker?","Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            var closing = MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo);
             {
-                this.Close();
+                e.Cancel = (closing == DialogResult.No);
             }
+        }
+
+        private void cb_Kamers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_DeurOpenen_Click(object sender, EventArgs e)
+        {
+            pb_Deur.Show();
+            pb_Deur.ImageLocation = "C:/Users/samir nemri/Desktop/gif/giphy.gif";                   //"C:/Users/shirl/Desktop/giphy.gif";
+            pb_Deur.Load();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

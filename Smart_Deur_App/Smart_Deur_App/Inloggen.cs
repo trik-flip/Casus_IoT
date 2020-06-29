@@ -57,6 +57,7 @@ namespace Smart_Deur_App
                     HoofdmenuBeveiligingIT hoofdmenuIt = new HoofdmenuBeveiligingIT();
                     hoofdmenuIt.Show();
                     this.Hide();
+                    
                 }
             }
             else MessageBox.Show("Ongeldige gebruikersnaam/wachtwoord");
@@ -65,10 +66,17 @@ namespace Smart_Deur_App
 
         private void Inloggen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+
+            var closing = MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo);
             {
-                this.Close();
+                e.Cancel = (closing == DialogResult.No);
             }
+            
+        }
+
+        private void Inloggen_Load(object sender, EventArgs e)
+        {
+
         }
     }
     

@@ -94,9 +94,10 @@
             this.pb_Deur.Image = ((System.Drawing.Image)(resources.GetObject("pb_Deur.Image")));
             this.pb_Deur.Location = new System.Drawing.Point(92, 265);
             this.pb_Deur.Name = "pb_Deur";
-            this.pb_Deur.Size = new System.Drawing.Size(158, 192);
+            this.pb_Deur.Size = new System.Drawing.Size(251, 192);
             this.pb_Deur.TabIndex = 10;
             this.pb_Deur.TabStop = false;
+            this.pb_Deur.Click += new System.EventHandler(this.pb_Deur_Click);
             // 
             // HoofdmenuVerpleger
             // 
@@ -112,6 +113,7 @@
             this.Name = "HoofdmenuVerpleger";
             this.Text = "HoofdmenuVerpleger";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HoofdmenuVerpleger_FormClosing);
+            this.Load += new System.EventHandler(this.HoofdmenuVerpleger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Deur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
