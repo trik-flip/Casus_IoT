@@ -112,6 +112,7 @@
             this.Name = "HoofdmenuVerpleger";
             this.Text = "HoofdmenuVerpleger";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HoofdmenuVerpleger_FormClosing);
+            this.Load += new System.EventHandler(this.HoofdmenuVerpleger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Deur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

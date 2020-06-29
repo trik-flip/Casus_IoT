@@ -78,9 +78,9 @@ namespace Smart_Deur_App
 
         private void HoofdmenuBeveiligingIT_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Weet u het zeker?", "Afsluiten",MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            var closing = MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo);
             {
-                this.Close();
+                e.Cancel = (closing == DialogResult.No);
             }
         }
     }

@@ -40,9 +40,9 @@ namespace Smart_Deur_App
 
         private void HoofdmenuVerpleger_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            var closing = MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo);
             {
-                this.Close();
+                e.Cancel = (closing == DialogResult.No);
             }
         }
     
@@ -52,6 +52,11 @@ namespace Smart_Deur_App
             BezoekersPasAanvragen bezoekersPasAanvragen = new BezoekersPasAanvragen();
             bezoekersPasAanvragen.Show();
             this.Hide();
+        }
+
+        private void HoofdmenuVerpleger_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

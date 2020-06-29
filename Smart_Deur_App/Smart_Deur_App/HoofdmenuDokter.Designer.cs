@@ -45,6 +45,7 @@
             this.cb_Kamers.Name = "cb_Kamers";
             this.cb_Kamers.Size = new System.Drawing.Size(121, 21);
             this.cb_Kamers.TabIndex = 13;
+            this.cb_Kamers.SelectedIndexChanged += new System.EventHandler(this.cb_Kamers_SelectedIndexChanged);
             // 
             // lb_SelecteerKamer
             // 
