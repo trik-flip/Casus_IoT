@@ -70,16 +70,18 @@
             // 
             // tb_Gebruikersnaam
             // 
+            this.tb_Gebruikersnaam.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Gebruikersnaam.Location = new System.Drawing.Point(244, 170);
             this.tb_Gebruikersnaam.Name = "tb_Gebruikersnaam";
-            this.tb_Gebruikersnaam.Size = new System.Drawing.Size(100, 21);
+            this.tb_Gebruikersnaam.Size = new System.Drawing.Size(100, 20);
             this.tb_Gebruikersnaam.TabIndex = 3;
             // 
             // tb_Wachtwoord
             // 
+            this.tb_Wachtwoord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Wachtwoord.Location = new System.Drawing.Point(244, 214);
             this.tb_Wachtwoord.Name = "tb_Wachtwoord";
-            this.tb_Wachtwoord.Size = new System.Drawing.Size(100, 21);
+            this.tb_Wachtwoord.Size = new System.Drawing.Size(100, 20);
             this.tb_Wachtwoord.TabIndex = 4;
             // 
             // label1

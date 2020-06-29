@@ -21,16 +21,17 @@ namespace Smart_Deur_App
         private void btn_DeurOpenen_Click(object sender, EventArgs e)
         {
             pb_Deur.Show();
-            pb_Deur.ImageLocation = "C:/Users/shirl/Desktop/giphy.gif";
+            pb_Deur.ImageLocation = "C:/Users/samir nemri/Desktop/gif/giphy.gif";                   //"C:/Users/shirl/Desktop/giphy.gif";
             pb_Deur.Load();
         }
 
         private void btn_Uitloggen_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("U bent uitgelogd","Uitloggen",MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK){
+            if (MessageBox.Show("U bent uitgelogd","Uitloggen",MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK){
                 Inloggen inloggen = new Inloggen();
                 inloggen.Show();
                 this.Close();
+
             };
 
            
@@ -55,6 +56,11 @@ namespace Smart_Deur_App
         }
 
         private void HoofdmenuVerpleger_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pb_Deur_Click(object sender, EventArgs e)
         {
 
         }

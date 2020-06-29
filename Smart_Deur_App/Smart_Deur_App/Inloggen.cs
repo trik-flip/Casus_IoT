@@ -57,6 +57,7 @@ namespace Smart_Deur_App
                     HoofdmenuBeveiligingIT hoofdmenuIt = new HoofdmenuBeveiligingIT();
                     hoofdmenuIt.Show();
                     this.Hide();
+                    
                 }
             }
             else MessageBox.Show("Ongeldige gebruikersnaam/wachtwoord");

@@ -23,8 +23,18 @@ namespace Smart_Deur_App
             {
                 Inloggen inloggen = new Inloggen();
                 inloggen.Show();
-                this.Close();
+                this.Hide();
+                
             };
+        }
+        private void HoofdmenuBeveiligingIT_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var closing = MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo);
+            {
+                e.Cancel = (closing == DialogResult.No);
+            }
+
+
         }
 
         private void btn_PasMaken_Click(object sender, EventArgs e)
@@ -76,13 +86,7 @@ namespace Smart_Deur_App
             this.Hide();
         }
 
-        private void HoofdmenuBeveiligingIT_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            var closing = MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo);
-            {
-                e.Cancel = (closing == DialogResult.No);
-            }
-        }
+        
     }
     
 }
