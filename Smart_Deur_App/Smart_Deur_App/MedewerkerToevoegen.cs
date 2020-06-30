@@ -17,7 +17,7 @@ namespace Smart_Deur_App
         public MedewerkerToevoegen()
         {
             InitializeComponent();
-            conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ZiekenhuisDB.accdb.accdb");
+            conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ZiekenhuisDB.accdb");
         }
 
         private void btn_Uitloggen_Click(object sender, EventArgs e)
@@ -48,8 +48,8 @@ namespace Smart_Deur_App
                 int pasid = 9999;
                 string kamernummmer = "KAW10";
                 
-                string query = "INSERT INTO Gebruiker (MedewerkerNR/BezoekerNR, Naam, Achternaam, Adres, Telefoonnummer, Kind, Kamernummer, PasID, Functie, Gebruikersnaam, Wachtwoord) " +
-                    "VALUES ('@medewerkernr','@naam', '@achternaam', '@adres', '@telefoonnummer', '@kind', '@kamernummer', '@pasid','@functie', '@gebruikersnaam', '@wachtwoord')";
+                string query = "INSERT INTO Gebruiker (RegistratieNR, Naam, Achternaam, Adres, Telefoonnummer, Kind, Kamernummer, PasID, Functie, Gebruikersnaam, Wachtwoord) " +
+                    "VALUES (@medewerkernr,@naam, @achternaam, @adres, @telefoonnummer, @kind, @kamernummer, @pasid,@functie, @gebruikersnaam, @wachtwoord)";
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 //cmd.Parameters.AddWithValue("@ID", 20);
                 cmd.Parameters.AddWithValue("@medewerkernr", medewerkernr);
