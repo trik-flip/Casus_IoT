@@ -35,9 +35,7 @@ namespace Smart_Deur_App
             {
                 if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                 {
-                    Inloggen inloggen = new Inloggen();
-                    inloggen.Show();
-                    this.Close();
+                    Application.ExitThread();
                 }
             }
         }

@@ -31,6 +31,7 @@ namespace Smart_Deur_App
         {
             if (MessageBox.Show("Medewerker is toegevoegd", "Medewerker toevoegen", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
+                //insert into
                 HoofdmenuBeveiligingIT hoofdmenuBeveiligingIT = new HoofdmenuBeveiligingIT();
                 hoofdmenuBeveiligingIT.Show();
                 this.Close();

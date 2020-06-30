@@ -36,10 +36,13 @@ namespace Smart_Deur_App
 
         private void BezoekersPasAanpassen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                this.Close();
-            };
+                if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                {
+                    Application.ExitThread();
+                }
+            }
         }
 
         private void btn_Aanpassen_Click(object sender, EventArgs e)

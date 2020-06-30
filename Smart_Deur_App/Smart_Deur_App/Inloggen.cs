@@ -16,79 +16,89 @@ namespace Smart_Deur_App
     {
 
         OleDbConnection conn;
+        private string gebruikersnaamDB;
+        private string wachtwoordDB;
+        private string functieDB;
         public Inloggen()
         {
             InitializeComponent();
-            conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ZiekenhuisDB.accdb");
+            conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ZiekenhuisDB.accdb.accdb");
         }
 
         private void btn_Inloggen_Click(object sender, EventArgs e)
         {
-           
+
 
             string gebruikersnaam = tb_Gebruikersnaam.Text;
             string wachtwoord = tb_Wachtwoord.Text;
-            //Alle gebruikers moeten in 1 tabel komen met functie erbij
-            //kolommen samenvoegen en dan vergelijken met elkaar. Dus gebruikersnaam, ww en functie
-            //string voor opvragen data in db
-            // eerst gebruikersnaam controleren of voorkomt in de db
-            // ophalen gebruiker/wachtwoord
-            // vergelijken met ingevoerde dus : gebruikersnaam hierboven en wachtwoord
-            //als correct functie van gebruiker ophalen
-            // met if en elif juiste menu openen.
-            string query = "SELECT Gebruikersnaam FROM Gebruiker WHERE Gebruikersnaam = @gebruikersnaam";
+            string query = "SELECT Gebruikersnaam, Wachtwoord FROM Gebruiker WHERE Gebruikersnaam = @gebruikersnaam AND Wachtwoord = @wachtwoord";
             OleDbCommand cmd = new OleDbCommand(query, conn);
             cmd.Parameters.AddWithValue("@gebruikersnaam", gebruikersnaam);
             cmd.Parameters.AddWithValue("@wachtwoord", wachtwoord);
             conn.Open(); //openeen connecet             
             OleDbDataReader reader = cmd.ExecuteReader();
+
             while (reader.Read()) //database lezen
             {
-                var gebruikersnaamDB = reader.GetString(0);
-                
-            }            
-        
+                gebruikersnaamDB = reader.GetString(0);
+                wachtwoordDB = reader.GetString(1);
+            }
             conn.Close();
 
-            
-            //@TODO Dit lijstje aanpassen naar functie van gebruiker
-            if (tb_Gebruikersnaam.Text == "Verpleger01" && tb_Wachtwoord.Text == "Welkom123")
+
+            if (gebruikersnaam == gebruikersnaamDB && wachtwoord == wachtwoordDB) //contorleren combinatie gebruikersnaam en wachtwoord
             {
-                    
+                string controleer = "SELECT Functie FROM Gebruiker WHERE Gebruikersnaam = @gebruikersnaam";
+                OleDbCommand controleren = new OleDbCommand(controleer, conn);
+                controleren.Parameters.AddWithValue("@gebruikersnaam", gebruikersnaam);
+                conn.Open();
+                OleDbDataReader reader1 = controleren.ExecuteReader();
+                while (reader1.Read())
+                {
+                    functieDB = reader1.GetString(0);
+
+                }
+                conn.Close();
+
+                if (functieDB == "Verpleger")
+                {
                     HoofdmenuVerpleger hoofdmenuVerpleger = new HoofdmenuVerpleger();
                     hoofdmenuVerpleger.Show();
                     this.Hide();
-
-            }
-            else if (tb_Gebruikersnaam.Text == "Dokter01")
-            {
-                if (tb_Wachtwoord.Text == "Welkom123")
+                }
+                else if (functieDB == "Dokter")
                 {
+
                     HoofdmenuDokter hoofdmenuDokter = new HoofdmenuDokter();
                     hoofdmenuDokter.Show();
                     this.Hide();
+
                 }
-            }
-            else if (tb_Gebruikersnaam.Text == "Beveiliger01")
-            {
-                if (tb_Wachtwoord.Text == "Welkom123")
+                else if (functieDB == "Beveiliger")
                 {
+
+
                     HoofdmenuBeveiligingIT hoofdmenuBeveiliging = new HoofdmenuBeveiligingIT();
                     hoofdmenuBeveiliging.Show();
                     this.Hide();
+
                 }
-            }
-            else if (tb_Gebruikersnaam.Text == "IT01")
-            {
-                if (tb_Wachtwoord.Text == "Welkom123")
+                else if (functieDB == "Iter")
                 {
+
                     HoofdmenuBeveiligingIT hoofdmenuIt = new HoofdmenuBeveiligingIT();
                     hoofdmenuIt.Show();
-                    this.Hide();        
+                    this.Hide();
+
                 }
+                else MessageBox.Show("Gebruiker heeft geen functie");
+
             }
-            else MessageBox.Show("Ongeldige gebruikersnaam/wachtwoord");
+            else MessageBox.Show("Onjuist gebruikersnaam/wachtwoord ");
+
         }
+
+
 
         private void Inloggen_FormClosing(object sender, FormClosingEventArgs e)
         {
