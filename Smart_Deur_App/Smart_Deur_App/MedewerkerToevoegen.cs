@@ -48,23 +48,22 @@ namespace Smart_Deur_App
                 int pasid = 9999;
                 string kamernummmer = "KAW10";
                 
-                string query = "INSERT INTO Gebruiker (MedewerkerNR/BezoekerNR, Naam, Achternaam, Adres, Telefoonnummer, Kind, Kamernummer, PasID, Functie, Gebruikersnaam, Wachtwoord) " +
-                    "VALUES ('@medewerkernr','@naam', '@achternaam', '@adres', '@telefoonnummer', '@kind', '@kamernummer', '@pasid','@functie', '@gebruikersnaam', '@wachtwoord')";
+                string query = "INSERT INTO Gebruiker (MedewerkerNR/BezoekerNR, Naam, Achternaam, Adres, Telefoonnummer, Kind, Kamernummer, PasID, Functie, Gebruikersnaam, Wachtwoord) VALUES ('@medewerkernr','@naam', '@achternaam', '@adres', '@telefoonnummer', '@kind', '@kamernummer', '@pasid','@functie', '@gebruikersnaam', '@wachtwoord')";
                 OleDbCommand cmd = new OleDbCommand(query, conn);
-                //cmd.Parameters.AddWithValue("@ID", 20);
-                cmd.Parameters.AddWithValue("@medewerkernr", medewerkernr);
-                cmd.Parameters.AddWithValue("@naam", naam);
-                cmd.Parameters.AddWithValue("@achternaam", achternaam); 
+                //cmd.Parameters.AddWithValue("@ID", 20)
+                conn.Open();
+                cmd.Parameters.AddWithValue('@medewerkernr', medewerkernr);
+                cmd.Parameters.AddWithValue('@naam', naam);
+                cmd.Parameters.AddWithValue('@achternaam', achternaam); 
                 cmd.Parameters.AddWithValue("@adres", adres);
-                cmd.Parameters.AddWithValue("@telefoonnummer", telefoonnummer);
+                cmd.Parameters.AddWithValue('@telefoonnummer", telefoonnummer);
                 cmd.Parameters.AddWithValue("@kind", kind);
                 cmd.Parameters.AddWithValue("@kamernummer", kamernummmer);
                 cmd.Parameters.AddWithValue("@pasid", pasid);
                 cmd.Parameters.AddWithValue("@functie", functie);
                 cmd.Parameters.AddWithValue("@gebruikersnaam", gebruikersnaam);
                 cmd.Parameters.AddWithValue("@wachtwoord", wachtwoord);
-                conn.Open();
-                //cmd.ExecuteReaderAsync();
+               // conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
                          

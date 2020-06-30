@@ -22,7 +22,7 @@ namespace Smart_Deur_App
         public Inloggen()
         {
             InitializeComponent();
-            conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ZiekenhuisDB.accdb.accdb");
+            conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ZiekenhuisDB.accdb");
         }
 
         private void btn_Inloggen_Click(object sender, EventArgs e)
