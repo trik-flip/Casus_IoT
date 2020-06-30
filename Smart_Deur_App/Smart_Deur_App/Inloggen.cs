@@ -45,8 +45,8 @@ namespace Smart_Deur_App
             while (reader.Read()) //database lezen
             {
                 var gebruikersnaamDB = reader.GetString(0);
-            }
-            
+                
+            }            
         
             conn.Close();
 
