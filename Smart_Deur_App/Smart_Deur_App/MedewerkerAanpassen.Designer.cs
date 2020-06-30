@@ -55,6 +55,7 @@
             this.btn_Zoeken.TabIndex = 74;
             this.btn_Zoeken.Text = "Zoeken";
             this.btn_Zoeken.UseVisualStyleBackColor = true;
+            this.btn_Zoeken.Click += new System.EventHandler(this.btn_Zoeken_Click);
             // 
             // tb_Wachtwoord
             // 
@@ -88,7 +89,7 @@
             this.btn_Aanpassen.Name = "btn_Aanpassen";
             this.btn_Aanpassen.Size = new System.Drawing.Size(75, 23);
             this.btn_Aanpassen.TabIndex = 70;
-            this.btn_Aanpassen.Text = "Toevoegen";
+            this.btn_Aanpassen.Text = "Wijzigen";
             this.btn_Aanpassen.UseVisualStyleBackColor = true;
             this.btn_Aanpassen.Click += new System.EventHandler(this.btn_Aanpassen_Click);
             // 

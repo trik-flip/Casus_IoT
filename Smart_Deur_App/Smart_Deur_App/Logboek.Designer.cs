@@ -32,10 +32,10 @@
             this.tb_Zoeken = new System.Windows.Forms.TextBox();
             this.btn_Zoeken = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dg_Logboek = new System.Windows.Forms.DataGridView();
             this.btn_Uitloggen = new System.Windows.Forms.Button();
             this.btn_Annuleren = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_Logboek)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_Logboek
@@ -63,6 +63,7 @@
             this.btn_Zoeken.TabIndex = 32;
             this.btn_Zoeken.Text = "Zoeken";
             this.btn_Zoeken.UseVisualStyleBackColor = true;
+            this.btn_Zoeken.Click += new System.EventHandler(this.btn_Zoeken_Click);
             // 
             // dateTimePicker1
             // 
@@ -71,13 +72,13 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 33;
             // 
-            // dataGridView1
+            // dg_Logboek
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(77, 137);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 34;
+            this.dg_Logboek.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_Logboek.Location = new System.Drawing.Point(77, 137);
+            this.dg_Logboek.Name = "dg_Logboek";
+            this.dg_Logboek.Size = new System.Drawing.Size(240, 150);
+            this.dg_Logboek.TabIndex = 34;
             // 
             // btn_Uitloggen
             // 
@@ -106,7 +107,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_Annuleren);
             this.Controls.Add(this.btn_Uitloggen);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dg_Logboek);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btn_Zoeken);
             this.Controls.Add(this.tb_Zoeken);
@@ -114,7 +115,7 @@
             this.Name = "Logboek";
             this.Text = "Logboek";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Logboek_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_Logboek)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,7 +127,7 @@
         private System.Windows.Forms.TextBox tb_Zoeken;
         private System.Windows.Forms.Button btn_Zoeken;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dg_Logboek;
         private System.Windows.Forms.Button btn_Uitloggen;
         private System.Windows.Forms.Button btn_Annuleren;
     }

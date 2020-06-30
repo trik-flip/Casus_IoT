@@ -74,6 +74,7 @@
             this.btn_NaamZoeken.TabIndex = 74;
             this.btn_NaamZoeken.Text = "Zoeken";
             this.btn_NaamZoeken.UseVisualStyleBackColor = true;
+            this.btn_NaamZoeken.Click += new System.EventHandler(this.btn_NaamZoeken_Click);
             // 
             // btn_Uitloggen
             // 
