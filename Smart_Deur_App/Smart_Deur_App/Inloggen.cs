@@ -36,7 +36,7 @@ namespace Smart_Deur_App
             // vergelijken met ingevoerde dus : gebruikersnaam hierboven en wachtwoord
             //als correct functie van gebruiker ophalen
             // met if en elif juiste menu openen.
-            string query = "SELECT Gebruikersnaam FROM Verpleger WHERE Gebruikersnaam = @gebruikersnaam";
+            string query = "SELECT Gebruikersnaam FROM Gebruiker WHERE Gebruikersnaam = @gebruikersnaam";
             OleDbCommand cmd = new OleDbCommand(query, conn);
             cmd.Parameters.AddWithValue("@gebruikersnaam", gebruikersnaam);
             cmd.Parameters.AddWithValue("@wachtwoord", wachtwoord);
