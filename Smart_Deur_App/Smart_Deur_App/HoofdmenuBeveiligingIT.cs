@@ -45,49 +45,49 @@ namespace Smart_Deur_App
         {
             MenuPasMaken menuPasMaken = new MenuPasMaken();
             menuPasMaken.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btn_PasAanpassen_Click(object sender, EventArgs e)
         {
             MenuPasAanpassen menuPasAanpassen = new MenuPasAanpassen();
             menuPasAanpassen.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btn_PasVerwijderen_Click(object sender, EventArgs e)
         {
             MenuPasVerwijderen menuPasVerwijderen = new MenuPasVerwijderen();
             menuPasVerwijderen.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btn_MedewerkerToevoegen_Click(object sender, EventArgs e)
         {
             MedewerkerToevoegen medewerkerToevoegen = new MedewerkerToevoegen();
             medewerkerToevoegen.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btn_MedewerkerAanapssen_Click(object sender, EventArgs e)
         {
             MedewerkerAanpassen medewerkerAanpassen = new MedewerkerAanpassen();
             medewerkerAanpassen.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btn_MedewerkerVerwijderen_Click(object sender, EventArgs e)
         {
             MedewerkerVerwijderen medewerkerVerwijderen = new MedewerkerVerwijderen();
             medewerkerVerwijderen.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btn_LogboekOpvragen_Click(object sender, EventArgs e)
         {
             Logboek logboek = new Logboek();
             logboek.Show();
-            this.Close();
+            this.Hide();
         }
 
         
