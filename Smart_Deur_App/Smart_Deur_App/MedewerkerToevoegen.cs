@@ -49,7 +49,7 @@ namespace Smart_Deur_App
                 string kamernummmer = "KAW10";
                 
                 string query = "INSERT INTO Gebruiker (RegistratieNR, Naam, Achternaam, Adres, Telefoonnummer, Kind, Kamernummer, PasID, Functie, Gebruikersnaam, Wachtwoord) " +
-                    "VALUES (@medewerkernr,@naam, @achternaam, @adres, @telefoonnummer, @kind, @kamernummer, @pasid,@functie, @gebruikersnaam, @wachtwoord)";
+                    "VALUES (@medewerkernr,@naam, @achternaam, @@adres, @telefoonnummer, @kind, @kamernummer, @pasid,@functie, @gebruikersnaam, @wachtwoord)";
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 //cmd.Parameters.AddWithValue("@ID", 20);
                 cmd.Parameters.AddWithValue("@medewerkernr", medewerkernr);
