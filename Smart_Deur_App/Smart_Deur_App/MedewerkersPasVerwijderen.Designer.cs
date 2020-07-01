@@ -77,6 +77,7 @@
             this.btn_ScanBarcode.TabIndex = 65;
             this.btn_ScanBarcode.Text = "Scan";
             this.btn_ScanBarcode.UseVisualStyleBackColor = true;
+            this.btn_ScanBarcode.Click += new System.EventHandler(this.btn_ScanBarcode_Click);
             // 
             // btn_NaamZoeken
             // 
@@ -86,6 +87,7 @@
             this.btn_NaamZoeken.TabIndex = 64;
             this.btn_NaamZoeken.Text = "Zoeken";
             this.btn_NaamZoeken.UseVisualStyleBackColor = true;
+            this.btn_NaamZoeken.Click += new System.EventHandler(this.btn_NaamZoeken_Click);
             // 
             // btn_Uitloggen
             // 

@@ -22,6 +22,7 @@ namespace Smart_Deur_App
 
         private void btn_Uitloggen_Click(object sender, EventArgs e)
         {
+            //bij het uitloggen wordt gevraagd of de gebruiker het zeker weet, weet deze het zeker wordt het inlogscherm weergegeven.
             if (MessageBox.Show("U bent uitgelogd", "Uitloggen", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 Inloggen inloggen = new Inloggen();
@@ -32,14 +33,14 @@ namespace Smart_Deur_App
 
         private void btn_Toevoegen_Click(object sender, EventArgs e)
         {
+            //toevoegen van een medewerker in de database
+            //TODO: alle kolommen van de database in de form plaatsen, sommige staan nu nog hardcoded
             if (MessageBox.Show("Medewerker is toegevoegd", "Medewerker toevoegen", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
-                //insert into
                 int medewerkernr = 55555;
                 string naam = tb_NaamMedewerker.Text;
                 string functie = tb_Functie.Text;
                 string adres = tb_Adres.Text;
-                //int telefoonnummer = tb_Telefoonnummer.ToInt;
                 string gebruikersnaam = tb_Gebruikersnaam.Text;
                 string wachtwoord = tb_Wachtwoord.Text;
                 string achternaam = "Potter";
@@ -51,7 +52,6 @@ namespace Smart_Deur_App
                 string query = "INSERT INTO Gebruiker (RegistratieNR, Naam, Achternaam, Adres, Telefoonnummer, Kind, Kamernummer, PasID, Functie, Gebruikersnaam, Wachtwoord) " +
                     "VALUES (@medewerkernr,@naam, @achternaam, @adres, @telefoonnummer, @kind, @kamernummer, @pasid,@functie, @gebruikersnaam, @wachtwoord)";
                 OleDbCommand cmd = new OleDbCommand(query, conn);
-                //cmd.Parameters.AddWithValue("@ID", 20);
                 cmd.Parameters.AddWithValue("@medewerkernr", medewerkernr);
                 cmd.Parameters.AddWithValue("@naam", naam);
                 cmd.Parameters.AddWithValue("@achternaam", achternaam); 
@@ -64,12 +64,9 @@ namespace Smart_Deur_App
                 cmd.Parameters.AddWithValue("@gebruikersnaam", gebruikersnaam);
                 cmd.Parameters.AddWithValue("@wachtwoord", wachtwoord);
                 conn.Open();
-                //cmd.ExecuteReaderAsync();
                 cmd.ExecuteNonQuery();
                 conn.Close();
                          
-
-
                 HoofdmenuBeveiligingIT hoofdmenuBeveiligingIT = new HoofdmenuBeveiligingIT();
                 hoofdmenuBeveiligingIT.Show();
                 this.Close();
@@ -78,6 +75,7 @@ namespace Smart_Deur_App
 
         private void btn_Annuleren_Click(object sender, EventArgs e)
         {
+            // als een gebruiker annuleert wordt het hoofdmenu weergegeven
             HoofdmenuBeveiligingIT hoofdmenuBeveiligingIT = new HoofdmenuBeveiligingIT();
             hoofdmenuBeveiligingIT.Show();
             this.Close();
@@ -85,13 +83,14 @@ namespace Smart_Deur_App
 
         private void MedewerkerToevoegen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //if (e.CloseReason == CloseReason.UserClosing)
-           // {
-            //    if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
-            //    {
-            //        this.Close();
-            //    }
-            //}
+            //als de gebruiker op het kruisje klikt wordt het inlogscherm weergegeven
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Inloggen inloggen = new Inloggen();
+                inloggen.Show();
+                this.Close();
+            }
+
         }
     }
 }

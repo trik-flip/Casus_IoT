@@ -77,7 +77,7 @@
             this.dg_Logboek.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_Logboek.Location = new System.Drawing.Point(77, 137);
             this.dg_Logboek.Name = "dg_Logboek";
-            this.dg_Logboek.Size = new System.Drawing.Size(240, 150);
+            this.dg_Logboek.Size = new System.Drawing.Size(667, 267);
             this.dg_Logboek.TabIndex = 34;
             // 
             // btn_Uitloggen

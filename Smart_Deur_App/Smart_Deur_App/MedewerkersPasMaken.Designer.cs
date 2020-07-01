@@ -86,6 +86,7 @@
             this.btn_ScanBarcode.TabIndex = 36;
             this.btn_ScanBarcode.Text = "Scan";
             this.btn_ScanBarcode.UseVisualStyleBackColor = true;
+            this.btn_ScanBarcode.Click += new System.EventHandler(this.btn_ScanBarcode_Click);
             // 
             // btn_KamerToevoegen
             // 
@@ -95,6 +96,7 @@
             this.btn_KamerToevoegen.TabIndex = 35;
             this.btn_KamerToevoegen.Text = "Nog een toevoegen";
             this.btn_KamerToevoegen.UseVisualStyleBackColor = true;
+            this.btn_KamerToevoegen.Click += new System.EventHandler(this.btn_KamerToevoegen_Click);
             // 
             // btn_NaamZoeken
             // 
@@ -104,6 +106,7 @@
             this.btn_NaamZoeken.TabIndex = 34;
             this.btn_NaamZoeken.Text = "Zoeken";
             this.btn_NaamZoeken.UseVisualStyleBackColor = true;
+            this.btn_NaamZoeken.Click += new System.EventHandler(this.btn_NaamZoeken_Click);
             // 
             // tb_Telefoonnummer
             // 

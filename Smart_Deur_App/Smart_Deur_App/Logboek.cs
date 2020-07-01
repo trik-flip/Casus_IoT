@@ -24,6 +24,7 @@ namespace Smart_Deur_App
 
         private void btn_Uitloggen_Click(object sender, EventArgs e)
         {
+            //bij het uitloggen wordt gevraagd of de gebruiker het zeker weet, weet deze het zeker wordt het inlogscherm weergegeven.
             if (MessageBox.Show("U bent uitgelogd", "Uitloggen", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 Inloggen inloggen = new Inloggen();
@@ -34,6 +35,7 @@ namespace Smart_Deur_App
 
         private void btn_Annuleren_Click(object sender, EventArgs e)
         {
+            //Bij annuleren wordt het hoofdmenu weergegeven
             HoofdmenuBeveiligingIT hoofdmenuBeveiligingIT = new HoofdmenuBeveiligingIT();
             hoofdmenuBeveiligingIT.Show();
             this.Hide();
@@ -41,10 +43,13 @@ namespace Smart_Deur_App
 
         private void Logboek_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //als de gebruiker op het kruisje klikt wordt het inlogscherm weergegeven
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                 {
+                    Inloggen inloggen = new Inloggen();
+                    inloggen.Show();
                     this.Close();
                 }
             }
@@ -52,7 +57,7 @@ namespace Smart_Deur_App
 
         private void btn_Zoeken_Click(object sender, EventArgs e)
         {
-
+            //TODO mogelijk maken om op medewerkernaam, bezoeker naam , datum en tijd te zoeken.
             string query = "SELECT Kamernummer FROM Kamer WHERE Kamernummer = @Kamernummer";
             OleDbCommand cmd = new OleDbCommand(query, conn);
             cmd.Parameters.AddWithValue("@Kamernummer", tb_Zoeken.Text);
@@ -67,6 +72,7 @@ namespace Smart_Deur_App
             conn.Close();
             if (tb_Zoeken.Text == kamernummerDB)
             {
+                //gegevens uit DB ophalen van het kamernummer
                 string weergeven = "SELECT * FROM Kamer WHERE Kamernummer =@Kamernummer";
                 OleDbCommand oleDb = new OleDbCommand(weergeven, conn);
                 oleDb.Parameters.AddWithValue("@Kamernummer", tb_Zoeken.Text);

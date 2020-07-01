@@ -31,6 +31,7 @@ namespace Smart_Deur_App
 
         private void btn_Uitloggen_Click(object sender, EventArgs e)
         {
+            //bij het uitloggen wordt gevraagd of de gebruiker het zeker weet, weet deze het zeker wordt het inlogscherm weergegeven.
             if (MessageBox.Show("U bent uitgelogd", "Uitloggen", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 Inloggen inloggen = new Inloggen();
@@ -41,6 +42,8 @@ namespace Smart_Deur_App
 
         private void btn_Aanpassen_Click(object sender, EventArgs e)
         {
+            //Aanpassen van de medewerkersgegevens
+            //TODO: From aanpassen zodat alle gegevens in die in de database staan aan te passen.
             if (MessageBox.Show("Medewerker is aangepast ", "Medewerker aanpassen", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 var naamMedewerker = tb_NaamMedewerker.Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
@@ -65,6 +68,7 @@ namespace Smart_Deur_App
 
         private void btn_Annuleren_Click(object sender, EventArgs e)
         {
+            //Bij annuleren wordt het hoofdmenu weergegeven.
             HoofdmenuBeveiligingIT hoofdmenuBeveiligingIT = new HoofdmenuBeveiligingIT();
             hoofdmenuBeveiligingIT.Show();
             this.Close();
@@ -72,10 +76,13 @@ namespace Smart_Deur_App
 
         private void MedewerkerAanpassen_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //als de gebruiker op het kruisje klikt wordt het inlogscherm weergegeven
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                 {
+                    Inloggen inloggen = new Inloggen();
+                    inloggen.Show();
                     this.Close();
                 }
             }
@@ -83,16 +90,17 @@ namespace Smart_Deur_App
 
         private void btn_Zoeken_Click(object sender, EventArgs e)
         {
+            // De medewerker opzoeken in de database en de textboxen invullen met de gegevens die van die medewerker staan in de database.
             var naamMedewerker = tb_NaamMedewerker.Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             if(naamMedewerker.Length > 0) { 
             string query = "SELECT Naam, Achternaam FROM Gebruiker WHERE Naam = @Naam AND Achternaam = @Achternaam";
             OleDbCommand cmd = new OleDbCommand(query, conn);
             cmd.Parameters.AddWithValue("@Naam", naamMedewerker[0]);
             cmd.Parameters.AddWithValue("@Achternaam", naamMedewerker[1]);
-            conn.Open(); //openeen connecet             
+            conn.Open();            
             OleDbDataReader reader = cmd.ExecuteReader();
 
-            while (reader.Read()) //database lezen
+            while (reader.Read()) 
             {
                 naamMedewerkerDB = reader.GetString(0);
                 achternaamMedewerkerDB = reader.GetString(1);
@@ -107,7 +115,7 @@ namespace Smart_Deur_App
                 gegevens.Parameters.AddWithValue("@Achternaam", naamMedewerker[1]);
                 conn.Open();
                 OleDbDataReader readerGegevens = gegevens.ExecuteReader();
-                while (readerGegevens.Read()) //database lezen
+                while (readerGegevens.Read())
                 {
                     functieDB = readerGegevens.GetString(0);
                     adresDB = readerGegevens.GetString(1);

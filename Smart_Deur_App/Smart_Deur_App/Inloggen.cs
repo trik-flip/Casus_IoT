@@ -28,17 +28,17 @@ namespace Smart_Deur_App
         private void btn_Inloggen_Click(object sender, EventArgs e)
         {
 
-
+            //controleren of gebruikersnaam en wachtwoord in de DB
             string gebruikersnaam = tb_Gebruikersnaam.Text;
             string wachtwoord = tb_Wachtwoord.Text;
             string query = "SELECT Gebruikersnaam, Wachtwoord FROM Gebruiker WHERE Gebruikersnaam = @gebruikersnaam AND Wachtwoord = @wachtwoord";
             OleDbCommand cmd = new OleDbCommand(query, conn);
             cmd.Parameters.AddWithValue("@gebruikersnaam", gebruikersnaam);
             cmd.Parameters.AddWithValue("@wachtwoord", wachtwoord);
-            conn.Open(); //openeen connecet             
+            conn.Open();          
             OleDbDataReader reader = cmd.ExecuteReader();
 
-            while (reader.Read()) //database lezen
+            while (reader.Read())
             {
                 gebruikersnaamDB = reader.GetString(0);
                 wachtwoordDB = reader.GetString(1);
@@ -46,7 +46,7 @@ namespace Smart_Deur_App
             conn.Close();
 
 
-            if (gebruikersnaam == gebruikersnaamDB && wachtwoord == wachtwoordDB) //contorleren combinatie gebruikersnaam en wachtwoord
+            if (gebruikersnaam == gebruikersnaamDB && wachtwoord == wachtwoordDB)
             {
                 string controleer = "SELECT Functie FROM Gebruiker WHERE Gebruikersnaam = @gebruikersnaam";
                 OleDbCommand controleren = new OleDbCommand(controleer, conn);
@@ -60,6 +60,7 @@ namespace Smart_Deur_App
                 }
                 conn.Close();
 
+                //afhankelijk van de functie wordt het volgende scherm weergegeven
                 if (functieDB == "Verpleger")
                 {
                     HoofdmenuVerpleger hoofdmenuVerpleger = new HoofdmenuVerpleger();
@@ -102,7 +103,7 @@ namespace Smart_Deur_App
 
         private void Inloggen_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            //als de gebruiker op het kruisje klikt de applicatie afgesloten.
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)

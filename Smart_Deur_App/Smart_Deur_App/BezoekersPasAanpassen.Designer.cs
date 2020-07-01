@@ -58,6 +58,7 @@
             this.bt_ZoekOuder.TabIndex = 79;
             this.bt_ZoekOuder.Text = "Zoek";
             this.bt_ZoekOuder.UseVisualStyleBackColor = true;
+            this.bt_ZoekOuder.Click += new System.EventHandler(this.bt_ZoekOuder_Click);
             // 
             // tb_Kamernummer
             // 
@@ -219,6 +220,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 379);
+            this.Controls.Add(this.btn_KamerToevoegen);
             this.Controls.Add(this.bt_ZoekOuder);
             this.Controls.Add(this.tb_Kamernummer);
             this.Controls.Add(this.lb_Kamernummer);
@@ -226,7 +228,6 @@
             this.Controls.Add(this.btn_Annuleren);
             this.Controls.Add(this.btn_Aanpassen);
             this.Controls.Add(this.btn_ScanBarcode);
-            this.Controls.Add(this.btn_KamerToevoegen);
             this.Controls.Add(this.tb_Telefoonnummer);
             this.Controls.Add(this.tb_Adres);
             this.Controls.Add(this.tb_NaamKind);

@@ -19,6 +19,7 @@ namespace Smart_Deur_App
 
         private void btn_Uitloggen_Click(object sender, EventArgs e)
         {
+            //bij het uitloggen wordt gevraagd of de gebruiker het zeker weet, weet deze het zeker wordt het inlogscherm weergegeven.
             if (MessageBox.Show("U bent uitgelogd", "Uitloggen", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 Inloggen inloggen = new Inloggen();
@@ -30,13 +31,14 @@ namespace Smart_Deur_App
         }
         private void HoofdmenuBeveiligingIT_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            //als de gebruiker op het kruisje klikt wordt het inlogscherm weergegeven
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 if (MessageBox.Show("Weet u het zeker?", "Afsluiten", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                 {
+                    Inloggen inloggen = new Inloggen();
+                    inloggen.Show();
                     this.Close();
-                    
                 }
             }
         }
