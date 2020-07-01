@@ -78,7 +78,7 @@ namespace Smart_Deur_App
             // als een gebruiker annuleert wordt het hoofdmenu weergegeven
             HoofdmenuBeveiligingIT hoofdmenuBeveiligingIT = new HoofdmenuBeveiligingIT();
             hoofdmenuBeveiligingIT.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void MedewerkerToevoegen_FormClosing(object sender, FormClosingEventArgs e)
