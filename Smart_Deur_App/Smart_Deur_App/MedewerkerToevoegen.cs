@@ -69,7 +69,7 @@ namespace Smart_Deur_App
                          
                 HoofdmenuBeveiligingIT hoofdmenuBeveiligingIT = new HoofdmenuBeveiligingIT();
                 hoofdmenuBeveiligingIT.Show();
-                this.Close();
+                this.Hide();
             }
         }
 
